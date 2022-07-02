@@ -5,7 +5,6 @@
 
 body {
   font-family: sans-serif;
-  background-color: #f7f7f7;
 }
 
 .container {
@@ -52,4 +51,104 @@ button {
 button:hover {
   cursor: pointer;
   opacity: 0.7;
+}
+
+/* みゆ追記  */
+img {
+  width: 100%;
+  vertical-align: bottom;
+  overflow: hidden;
+}
+
+#wrap {
+  margin: 0 auto;
+  max-width: 1500px;
+  width: 100%;
+  font-size: 0.9em;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
+
+.outer{
+  position: relative;
+}
+.inner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+.fadeIn {
+  animation-name: fadeInAnimate;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInAnimate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.margin_top {
+  margin-top: 60px;
+}
+
+.title_img {
+  max-width: 120px;
+  padding-left: 5%;
+}
+
+.flexbox {
+  display: flex;
+}
+
+#top_page {
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/top1.png), url(../images/top2.png);
+  background-position: left top, right bottom;
+  background-size:auto;
+  background-repeat: no-repeat;
+}
+
+#top_page p:nth-of-type(1) {
+  width: 40%;
+}
+
+#top_page p:nth-of-type(2) {
+  width: 15%;
+  position: absolute;
+  top: 59%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  animation-delay: 0.6s;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+#first_msg p {
+  text-align: center;
+}
+
+#schedule {
+  width: 90%;
+}
+
+#flexbox {
+  margin: 0 auto;
+}
+
+.schedule_img {
+  max-width: 500px;
+}
+
+.schedule_text {
+  padding-top: 100px;
+  max-width: 500px;
 }
