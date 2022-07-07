@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: sans-serif;
 }
@@ -112,6 +116,7 @@ ul {
   position: absolute;
   top: 1.5%;
   right: 2%;
+  letter-spacing: 1.5px;
 }
 
 .button_line001 a {
@@ -461,5 +466,18 @@ ul {
     position: absolute;
     bottom: -58px;
     right: 5%;
+  }
+
+  .button_line001 a {
+    font-size: 0.8em;
+  }
+
+  .button_line001 a:before {
+    width: 80%;
+  }
+
+  .button_line001 {
+    top: 0.5%;
+    right: 0.5%;
   }
 }
