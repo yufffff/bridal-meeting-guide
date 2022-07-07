@@ -199,7 +199,7 @@ ul {
   /*描画位置※位置は適宜調整してください*/
   position: absolute;
   left: 50%;
-  bottom: 80px;
+  bottom: 25%;
   /*全体の高さ*/
   height: 60px;
 }
@@ -350,7 +350,7 @@ ul {
   }
 
   .scrolldown1 {
-    bottom: 25%;
+    bottom: 36%;
   }
 
   .schedule_img {
@@ -369,6 +369,10 @@ ul {
   #wrap {
     max-width: 520px;
     font-size: 0.8em;
+  }
+
+  .inner {
+    top: 45%;
   }
 
   .title_img {
@@ -394,12 +398,12 @@ ul {
   }
 
   #top_page p:nth-of-type(2) {
+    top: 50%;
     width: 22%;
   }
 
   .scrolldown1 {
-    left: 5%;
-    bottom: 3%;
+    bottom: 37%;
   }
 
   .schedule_img {
@@ -411,7 +415,7 @@ ul {
   }
 
   .schedule_text {
-    width: 95%;
+    /* width: 95%; */
     padding-top: 20px;
     padding-left: 12%;
   }
