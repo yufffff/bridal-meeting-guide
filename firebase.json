@@ -1,0 +1,20 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "/login",
+        "destination": "/login.html",
+        "dynamicLinks": true
+      },
+      {
+        "source": "/",
+        "destination": "/index.html"
+      }
+    ],
+    "hosting": {
+      "cleanUrls": true
+    }
+  }
+}
