@@ -39,19 +39,19 @@ input {
   border-radius: 0;
 }
 
-button {
+/* button {
   justify-self: center;
   border: none;
-  background-color: #0d6efd;
+  background-color: pink;
   color: #fff;
   padding: 10px;
   font-size: 16px;
-}
+} */
 
-button:hover {
+/* button:hover {
   cursor: pointer;
   opacity: 0.7;
-}
+} */
 
 /* みゆ追記  */
 img {
@@ -64,12 +64,15 @@ ul {
   list-style: none;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
 #wrap {
   margin: 0 auto;
   max-width: 1500px;
   width: 100%;
   font-size: 0.9em;
-  font-family: '游ゴシック';
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #2e2e2e;
   letter-spacing: 2px;
 }
 
@@ -102,6 +105,55 @@ ul {
 
 .margin_top {
   margin-top: 60px;
+}
+
+/* LINE001 */
+.button_line001 {
+  position: absolute;
+  top: 1.5%;
+  right: 2%;
+}
+
+.button_line001 a {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 200px;
+  padding: 10px 25px;
+  color: #575656;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+}
+.button_line001 a:before {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.1);
+  transform: translateX(-50%);
+}
+.button_line001 a:after {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #000;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
+}
+.button_line001 a:hover {
+  /* opacity: 1; */
+  color: #000;
+}
+.button_line001 a:hover:after {
+  transform: scale(1, 1);
 }
 
 .title_img {
@@ -138,44 +190,44 @@ ul {
   -webkit-transform: translateY(-50%) translateX(-50%);
 }
 
-.scrolldown1{
+.scrolldown1 {
   /*描画位置※位置は適宜調整してください*/
-position:absolute;
-left:50%;
-bottom:80px;
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
   /*全体の高さ*/
-height:60px;
+  height: 60px;
 }
 
 /* 線の描写 */
-.scrolldown1::after{
-content: "";
+.scrolldown1::after {
+  content: '';
   /*描画位置*/
-position: absolute;
-top: 0;
+  position: absolute;
+  top: 0;
   /*線の形状*/
-width: 1px;
-height: 30px;
-background: #5f5f5f;
+  width: 1px;
+  height: 30px;
+  background: #5f5f5f;
   /*線の動き1.4秒かけて動く。永遠にループ*/
-animation: pathmove 1.4s ease-in-out infinite;
-opacity:0;
+  animation: pathmove 1.4s ease-in-out infinite;
+  opacity: 0;
 }
 
 /*高さ・位置・透過が変化して線が上から下に動く*/
-@keyframes pathmove{
-  0%{
-    height:0;
-    top:0;
+@keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
     opacity: 0;
   }
-  30%{
-    height:30px;
+  30% {
+    height: 30px;
     opacity: 1;
   }
-  100%{
-    height:0;
-    top:50px;
+  100% {
+    height: 0;
+    top: 50px;
     opacity: 0;
   }
 }
@@ -218,7 +270,8 @@ opacity:0;
   margin-top: 40px;
 }
 
-.people, .cats {
+.people,
+.cats {
   margin: 0 auto;
   width: 80%;
 }
@@ -238,7 +291,11 @@ opacity:0;
   text-align: center;
 }
 
-.p2 p, .p3 p, .p4 p, .p5 p, .p6 p  {
+.p2 p,
+.p3 p,
+.p4 p,
+.p5 p,
+.p6 p {
   width: 41.8%;
 }
 
@@ -282,24 +339,24 @@ opacity:0;
     background-size: 50%;
   }
 
-  #top_page p:nth-of-type(2){
+  #top_page p:nth-of-type(2) {
     top: 55%;
   }
 
-  .scrolldown1{
-    bottom:25%;
+  .scrolldown1 {
+    bottom: 25%;
   }
 
   .schedule_img {
     width: 40%;
     max-width: 500px;
   }
-  
+
   .schedule_text {
     padding-top: 10%;
   }
 }
-  
+
 /*520px以下*/
 @media screen and (max-width: 520px) {
   #wrap {
@@ -308,9 +365,9 @@ opacity:0;
   }
 
   .title_img {
-  padding-left: 5%;
-  padding-bottom: 2%;
-  max-width: 80px;
+    padding-left: 5%;
+    padding-bottom: 2%;
+    max-width: 80px;
   }
 
   #futurePlans .title_img {
@@ -328,16 +385,16 @@ opacity:0;
   #top_page p:nth-of-type(1) {
     width: 60%;
   }
-  
+
   #top_page p:nth-of-type(2) {
     width: 22%;
   }
 
-  .scrolldown1{
-  left: 5%;
-  bottom: 3%;
+  .scrolldown1 {
+    left: 5%;
+    bottom: 3%;
   }
-  
+
   .schedule_img {
     width: 80%;
     margin: 0 auto;
@@ -356,8 +413,9 @@ opacity:0;
     width: 55%;
   }
 
-  .people, .cats {
-  width: 90%;
+  .people,
+  .cats {
+    width: 90%;
   }
 
   .face_illust {
@@ -373,7 +431,11 @@ opacity:0;
     text-align: center;
   }
 
-  .p2 p, .p3 p, .p4 p, .p5 p, .p6 p  {
+  .p2 p,
+  .p3 p,
+  .p4 p,
+  .p5 p,
+  .p6 p {
     width: 47%;
   }
 
