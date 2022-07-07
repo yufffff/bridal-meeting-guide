@@ -60,14 +60,17 @@ img {
   overflow: hidden;
 }
 
+ul {
+  list-style: none;
+}
+
 #wrap {
-  /* display: none; */
   margin: 0 auto;
   max-width: 1500px;
   width: 100%;
   font-size: 0.9em;
-  font-family: 'ヒラギノ丸ゴ Pro W4', 'ヒラギノ丸ゴ Pro', 'Hiragino Maru Gothic Pro', 'ヒラギノ角ゴ Pro W3',
-    'Hiragino Kaku Gothic Pro', 'HG丸ｺﾞｼｯｸM-PRO', 'HGMaruGothicMPRO';
+  font-family: '游ゴシック';
+  letter-spacing: 2px;
 }
 
 .outer {
@@ -102,8 +105,9 @@ img {
 }
 
 .title_img {
-  max-width: 120px;
   padding-left: 5%;
+  padding-bottom: 2%;
+  max-width: 120px;
 }
 
 .flexbox {
@@ -114,7 +118,7 @@ img {
   margin: 0 auto;
   width: 100%;
   height: 100vh;
-  background-image: url(/img/top1.png), url(/img/top2.png);
+  background-image: url(img/top1.png), url(img/top2.png);
   background-position: left top, right bottom;
   background-size: auto;
   background-repeat: no-repeat;
@@ -127,30 +131,273 @@ img {
 #top_page p:nth-of-type(2) {
   width: 15%;
   position: absolute;
-  top: 59%;
+  top: 60%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   animation-delay: 0.6s;
   -webkit-transform: translateY(-50%) translateX(-50%);
 }
 
-#first_msg p {
+.scrolldown1{
+  /*描画位置※位置は適宜調整してください*/
+position:absolute;
+left:50%;
+bottom:80px;
+  /*全体の高さ*/
+height:60px;
+}
+
+/* 線の描写 */
+.scrolldown1::after{
+content: "";
+  /*描画位置*/
+position: absolute;
+top: 0;
+  /*線の形状*/
+width: 1px;
+height: 30px;
+background: #5f5f5f;
+  /*線の動き1.4秒かけて動く。永遠にループ*/
+animation: pathmove 1.4s ease-in-out infinite;
+opacity:0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove{
+  0%{
+    height:0;
+    top:0;
+    opacity: 0;
+  }
+  30%{
+    height:30px;
+    opacity: 1;
+  }
+  100%{
+    height:0;
+    top:50px;
+    opacity: 0;
+  }
+}
+
+.msg {
+  margin-bottom: 80px;
+}
+
+.msg p {
   text-align: center;
 }
 
 #schedule {
-  width: 90%;
+  margin: 0 auto;
+  width: 100%;
 }
 
-#flexbox {
+.schedule_flex {
+  width: 80%;
   margin: 0 auto;
 }
 
 .schedule_img {
-  max-width: 500px;
+  width: 30%;
+  max-width: 600px;
 }
 
 .schedule_text {
   padding-top: 100px;
-  max-width: 500px;
+  padding-left: 8%;
+}
+
+.family-title {
+  width: 30%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.mFamily {
+  margin-top: 40px;
+}
+
+.people, .cats {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.face_illust {
+  margin: 0 auto;
+  margin-bottom: 5%;
+  width: 50%;
+}
+
+.p-box {
+  width: 50%;
+  margin-bottom: 5%;
+}
+
+.p-box ul {
+  text-align: center;
+}
+
+.p2 p, .p3 p, .p4 p, .p5 p, .p6 p  {
+  width: 41.8%;
+}
+
+.p7 {
+  text-align: center;
+}
+
+#futurePlans .title_img {
+  max-width: 250px;
+}
+
+.plan_img {
+  margin-top: 10px;
+  padding-left: 10%;
+  padding-bottom: 2%;
+}
+
+.plan_text {
+  padding-left: 5%;
+}
+
+#last_msg {
+  position: relative;
+}
+
+.sharu {
+  width: 15%;
+  position: absolute;
+  bottom: -50px;
+  right: 10%;
+}
+
+/*960px以下*/
+@media screen and (max-width: 960px) {
+  #wrap {
+    max-width: 960px;
+    font-size: 0.85em;
+  }
+
+  #top_page {
+    background-size: 50%;
+  }
+
+  #top_page p:nth-of-type(2){
+    top: 55%;
+  }
+
+  .scrolldown1{
+    bottom:25%;
+  }
+
+  .schedule_img {
+    width: 40%;
+    max-width: 500px;
+  }
+  
+  .schedule_text {
+    padding-top: 10%;
+  }
+}
+  
+/*520px以下*/
+@media screen and (max-width: 520px) {
+  #wrap {
+    max-width: 520px;
+    font-size: 0.8em;
+  }
+
+  .title_img {
+  padding-left: 5%;
+  padding-bottom: 2%;
+  max-width: 80px;
+  }
+
+  #futurePlans .title_img {
+    max-width: 140px;
+  }
+
+  .flexbox {
+    display: block;
+  }
+
+  #top_page {
+    background-size: 67%;
+  }
+
+  #top_page p:nth-of-type(1) {
+    width: 60%;
+  }
+  
+  #top_page p:nth-of-type(2) {
+    width: 22%;
+  }
+
+  .scrolldown1{
+  left: 5%;
+  bottom: 3%;
+  }
+  
+  .schedule_img {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 480px;
+    margin-top: 20px;
+  }
+
+  .schedule_text {
+    width: 95%;
+    padding-top: 20px;
+    padding-left: 0%;
+    margin: 0 auto;
+  }
+
+  .family-title {
+    width: 55%;
+  }
+
+  .people, .cats {
+  width: 90%;
+  }
+
+  .face_illust {
+    width: 55%;
+  }
+
+  .p-box {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
+  .p-box ul {
+    text-align: center;
+  }
+
+  .p2 p, .p3 p, .p4 p, .p5 p, .p6 p  {
+    width: 47%;
+  }
+
+  .plan_img {
+    padding-top: 10px;
+    padding-left: 0%;
+    width: 70%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .plan_text {
+    padding-left: 0%;
+    text-align: center;
+  }
+
+  #last_msg {
+    position: relative;
+  }
+
+  .sharu {
+    width: 20%;
+    position: absolute;
+    bottom: -58px;
+    right: 5%;
+  }
 }
